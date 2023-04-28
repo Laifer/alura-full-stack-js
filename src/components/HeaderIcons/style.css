@@ -1,0 +1,9 @@
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin: 0 40px 0 0;
+    width: 25px;
+}
