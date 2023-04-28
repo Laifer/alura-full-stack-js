@@ -1,10 +1,15 @@
-import logo from './static/logo.svg';
 import './styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <pre>
+        <code>some text to test code html<br/>
+          foo bar():<br/>
+            foo = "bar"
+        </code>
+      </pre>
+      <header>
 
       </header>
     </div>
