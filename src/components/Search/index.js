@@ -48,14 +48,14 @@ const Result = styled.div`
     }
 `
 
-const ResultContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    padding: 10px 20px 0 20px;
-    max-width: 100%;
-    overflow-x: scroll;
-    overflow-y: scroll;
-`
+// const ResultContainer = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     padding: 10px 20px 0 20px;
+//     max-width: 100%;
+//     overflow-x: scroll;
+//     overflow-y: scroll;
+// `
 
 function Search() {
     const [searchedBooks, setSearchedBook] = useState([])
@@ -74,14 +74,12 @@ function Search() {
                     setSearchedBook(searchResult)
                 }}
             />
-            <ResultContainer>
             { searchedBooks.map( book => (  
                 <Result key={resultId++}>
                     <p>{book.name}</p>
-                    <img src={book.src} />
+                    <img alt='' src={book.src} />
                 </Result>
             ) ) }
-            </ResultContainer>
         </SearchContainer>
     )
 }
