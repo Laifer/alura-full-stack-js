@@ -1,17 +1,17 @@
 import styled from 'styled-components'
 import logo from '../../static/logo.svg'
 
+const LogoContainer = styled.div`
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+`
+
+const LogoImg = styled.img`
+  margin-right: 10px;
+`
+
 function Logo() {
-    const LogoContainer = styled.div`
-      display: flex;
-      font-size: 30px;
-      align-items: center;
-    `
-
-    const LogoImg = styled.img`
-      margin-right: 10px;
-    `
-
     return (
         <LogoContainer>
           <LogoImg 
