@@ -2,10 +2,12 @@ import styled from 'styled-components'
 
 import { books } from './recentReleasesData'
 import { Title } from '../Title'
+import RecommendedCard from '../RecommendedCard'
+import bookImg from '../../static/livro2.png'
 
 const RecentReleasesContainer = styled.section`
     display: flex;    
-    background-color: #EBECEE;
+    background-color: #282a36;
     padding-bottom: 20px;
     flex-direction: column;
 `
@@ -17,6 +19,7 @@ const NewBookContainer = styled.div`
     justify-content: center;
     cursor: pointer;
     overflow-x: scroll;
+    background-color: #44475a;
 `
 
 function RecentReleases() {
@@ -31,6 +34,12 @@ function RecentReleases() {
                 <img alt={book.name} src={book.src}/>
             ) )}
             </NewBookContainer>
+            <RecommendedCard
+                title='Talvez você se interesse por'
+                subtitle='Angular 11'
+                description='Construindo uma aplicação com a plataforma Google'
+                img={bookImg}
+            />
         </RecentReleasesContainer>
     )
 }
