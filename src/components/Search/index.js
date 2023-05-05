@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Input from '../Input'
-import { books } from './searchData'
+import { getBooks } from '../../services/books'
 
 const SearchContainer = styled.section`
     background-image: linear-gradient(90deg, #002F52, #326589);
@@ -59,6 +59,12 @@ const Result = styled.div`
 
 function Search() {
     const [searchedBooks, setSearchedBook] = useState([])
+    const [books, setBooks] = useState([])
+
+    useEffect(() => {
+        const apiBooks = getBooks()
+        setBooks(apiBooks)
+    }, [])
 
     let resultId = 0
 
