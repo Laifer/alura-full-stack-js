@@ -28,7 +28,7 @@ function HeaderOptions() {
     return (
         <Options>
           { textOptions.map( (text) => (
-              <Link to={`/${text.toLowerCase()}`}><Option key={iconId++}><p>{text}</p></Option></Link>
+              <Link to={`/${text.toLowerCase()}`} key={iconId++}><Option key={iconId++}><p>{text}</p></Option></Link>
             )
           )}
         </Options>

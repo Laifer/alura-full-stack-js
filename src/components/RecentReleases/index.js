@@ -22,6 +22,8 @@ const NewBookContainer = styled.div`
     background-color: #44475a;
 `
 
+let iconId = 0
+
 function RecentReleases() {
     return (
         <RecentReleasesContainer>
@@ -31,7 +33,7 @@ function RecentReleases() {
             >ULTIMOS LANÇAMENTOS</Title>
             <NewBookContainer>
             {books.map( book => (
-                <img alt={book.name} src={book.src}/>
+                <img alt={book.name} src={book.src} key={iconId++}/>
             ) )}
             </NewBookContainer>
             <RecommendedCard
