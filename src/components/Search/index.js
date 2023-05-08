@@ -62,9 +62,13 @@ function Search() {
     const [books, setBooks] = useState([])
 
     useEffect(() => {
-        const apiBooks = getBooks()
-        setBooks(apiBooks)
+        fetchBooks()
     }, [])
+
+    async function fetchBooks() {
+        const apiBooks = await getBooks()
+        setBooks(apiBooks)
+    }
 
     let resultId = 0
 
